@@ -1,0 +1,85 @@
+html {
+    cursor: url(../IMG/mao_alien.png) 30 30, auto;
+    /*Na instrução do cursor ao especificarmos os valores 30 30 depois da url da imagem, estamos especificando que o pixel que dispara esse evento está 30 pixels para a direita e 30 pixels para baixo da imagem*/
+    /*auto = Padrão. O navegador define o tipo do cursor */
+}
+
+
+body{
+    background: url(../IMG/universe.jpg) no-repeat;
+    width: 100%;
+    height: 100vh; /* vh = altura da viewport (0 a 100), altura do body aumenta junto*/
+    background-position: 50% 50%; /*O primeiro valor é a posição horizontal e o segundo valor é a vertical. O canto superior esquerdo é 0% 0%. O canto inferior direito é 100% 100%. Se você especificar apenas um valor, o outro valor será 50%. . O valor padrão é: 0% 0% */
+    background-size: cover; /*Redimensione a imagem de plano de fundo para cobrir_todo o contêiner, mesmo que tenha que esticar a imagem ou cortar um pouco uma das bordas */
+    margin: 0; /*Elimina a margem padrão do body, e com isso elimina as barras de rolagens */
+}
+
+
+.foguete1{
+    width: 50px;
+    height: 50px;
+}
+
+.foguete2{
+    width: 70px;
+    height: 70px;
+}
+
+.foguete3{
+    width: 90px;
+    height: 90px;
+}
+
+
+.ladoA{
+    transform: scaleX(1); /* Mantém o lado horizontal padrão do foguete*/
+}
+
+.ladoB{
+    transform: scaleX(-1); /* Inverte o lado horizontal do foguete */
+}
+
+
+.painel{
+    position: absolute;
+    width: 190px;
+    padding: 10px;
+    left: 0;
+    bottom: 0;
+    border-top: solid 1px #fff;
+    background: #fff;
+    opacity: 0.5;
+    border-radius: 20px;
+}
+
+.score{
+    position: absolute;
+    padding: 10px;
+    right: 0;
+    top: 0;
+    border-top: solid 1px #fff;
+    background: #fff;
+    opacity: 0.5;
+    border-radius: 20px;
+}
+
+.xp{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.cronometro{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.vidas{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.vidas img{
+    height: 15px;
+    width: 15px;
+}

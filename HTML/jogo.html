@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+
+    <title>Game Alien X Human</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../CSS/estilo.css">
+
+    <!-- Icone do site -->
+    <link rel="shortcut icon" href="../IMG/alien.png" >
+
+</head>
+
+<!-- Assim que o tamanho do body é modificado pelo usuario, o onsize detecta isso e chama a função em questão para
+a área do jogo ser ajustada-->
+<body class="corpo" onresize="ajustaTamanhoPalcoJogo()">
+    <div class="score">
+        <span class="xp"> Score: <span id="score"> </span> xp </span>
+        <br>
+        10 xp = 1 vida
+    </div>
+
+    <div class="painel">
+        <div class="vidas">
+             Vidas: <span id="vida"> </span>
+            <img src="../IMG/coracao_cheio.png">
+        </div>
+
+        <div class="cronometro"> Tempo restante: <span id="cronometro"></span></div>
+    </div>
+</body>
+
+<!-- Correção da ordem de precedência. A função posição randomica só pode ser executada após o body ser gerado,
+pois os elementos html que serão criados serão filhos do body, logo, o body tem que existir  -->
+<script rel="script" type="text/javascript" src="../JS/jogo.js"></script>
+<script rel="script" type="text/javascript">
+
+    document.getElementById('cronometro').innerHTML = tempo;
+    document.getElementById('score').innerHTML = score;
+    document.getElementById('vida').innerHTML = vidas;
+    setInterval(posicaoRandomica, criaFogueteTempo); //Set interval recebe um callBack como argumento, ou seja, o endereço de uma função
+
+</script>
+
+</html>
