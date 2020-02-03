@@ -5,10 +5,10 @@
 
     <title>Game Alien X Human</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="../CSS/estilo.css">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
 
     <!-- Icone do site -->
-    <link rel="shortcut icon" href="../IMG/alien.png" >
+    <link rel="shortcut icon" href="alien.png" >
 
 </head>
 
@@ -24,7 +24,7 @@ a área do jogo ser ajustada-->
     <div class="painel">
         <div class="vidas">
              Vidas: <span id="vida"> </span>
-            <img src="../IMG/coracao_cheio.png">
+            <img src="coracao_cheio.png">
         </div>
 
         <div class="cronometro"> Tempo restante: <span id="cronometro"></span></div>
@@ -33,7 +33,7 @@ a área do jogo ser ajustada-->
 
 <!-- Correção da ordem de precedência. A função posição randomica só pode ser executada após o body ser gerado,
 pois os elementos html que serão criados serão filhos do body, logo, o body tem que existir  -->
-<script rel="script" type="text/javascript" src="../JS/jogo.js"></script>
+<script rel="script" type="text/javascript" src="jogo.js"></script>
 <script rel="script" type="text/javascript">
 
     document.getElementById('cronometro').innerHTML = tempo;

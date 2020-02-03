@@ -1,7 +1,7 @@
         //Reproduz a trilha sónora do jogo infinitamente
 
         var audio_space = new Audio();
-        audio_space.src = "../MP3/space.mp3";
+        audio_space.src = "space.mp3";
         audio_space.loop = true;
         audio_space.play();
 
@@ -71,7 +71,7 @@
             var lado = ladoAleatorio();
 
             var foguete = document.createElement('img');
-            foguete.src = '../IMG/foguete.png';
+            foguete.src = 'foguete.png';
             foguete.className = tamanho + ' ' + lado;
             foguete.style.left = posicaoX + 'px';
             foguete.style.top = posicaoY + 'px';
@@ -90,7 +90,7 @@
                     //Reproduz o aúdio da adição de vida
 
                     var audio_vida = new Audio();
-                    audio_vida.src = "../MP3/vida.mp3";
+                    audio_vida.src = "vida.mp3";
                     audio_vida.play();
 
                     //
@@ -101,7 +101,7 @@
                 //Reproduz o aúdio da explosão
 
                 var audio_explosao = new Audio();
-                audio_explosao.src = "../MP3/explosao.mp3";
+                audio_explosao.src = "explosao.mp3";
                 audio_explosao.play();
 
                 //
@@ -109,7 +109,7 @@
                 //Cria a explosão
 
                 var explosao = document.createElement('img');
-                explosao.src = '../IMG/explosao.png';
+                explosao.src = 'explosao.png';
                 explosao.className = tamanho + ' ' + lado;
                 explosao.style.left = posicaoX + 'px';
                 explosao.style.top = posicaoY + 'px';
