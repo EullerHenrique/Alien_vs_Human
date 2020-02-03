@@ -26,12 +26,6 @@
 
             var link = window.location.href = 'jogo.html?' + nivel; //Envia o nível escolhido para a página do jogo
             window.location.href = link + '?' + tempo_de_jogo; ////Envia o tempo de jogo escolhido para a página do jogo
-
-            //Reproduz o áudio de boas vindas
-
-            var audio_game_over = new Audio();
-            audio_game_over.src = "welcome.mp3";
-            audio_game_over.play();
         }
     </script>
 
@@ -69,7 +63,13 @@
         <div class="col">
             <div class="d-flex justify-content-center">
                 <div class="ml-5 mb-2">
-                    <select class="form-control" id="nivel">
+                        <select class="form-control" onclick="function f() {
+                                    //Reproduz o áudio de boas vindas
+
+                                    var audio_game_over = new Audio();
+                                    audio_game_over.src = 'welcome.mp3';
+                                    audio_game_over.play();
+                    }" id="nivel">
                         <option value="">-- Selecione o nível </option>
                         <option value="nm">Normal</option>
                         <option value="md">Médio</option>
