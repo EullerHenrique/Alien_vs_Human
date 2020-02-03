@@ -5,21 +5,23 @@
 
     <title>Menu - Game Alien x Human</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="estilo.css">
-    <link rel="shortcut icon" href="alien.png" >
+    <link rel="stylesheet" type="text/css" href="../BOOTSTRAP_4/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/estilo.css">
+    <link rel="shortcut icon" href="../IMG/alien.png" >
+    <script rel="script" type="text/javascript" src="../JS/welcome.js"></script>
 
     <script rel="script" type="text/javascript">
+
         //Inicia o jogo de acordo com a dificuldade escolhida
 
         function iniciarJogo() {
             var nivel = document.getElementById('nivel').value;
-            if (nivel === '') {
+            if(nivel === ''){
                 alert('Selecione um nível para iniciar o jogo');
                 return false;
             }
             var tempo_de_jogo = document.getElementById('tempo_de_jogo').value;
-            if (tempo_de_jogo === '') {
+            if(tempo_de_jogo === ''){
                 alert('Selecione um tempo de jogo para iniciar o jogo');
                 return false;
             }
@@ -28,7 +30,6 @@
             window.location.href = link + '?' + tempo_de_jogo; ////Envia o tempo de jogo escolhido para a página do jogo
         }
     </script>
-
 </head>
 
 
@@ -37,16 +38,8 @@
 
     <div class="row">
         <div class="col">
-            <div class="d-flex justify-content-center mr-2">
-                <h1 style="color: white; margin-left: 30px">GAME</h1>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col">
-            <div class="d-flex justify-content-center ">
-                <img src="game.png" width="400px" height="400px">
+            <div class="d-flex justify-content-center">
+                <h1 style="color: white; margin-left: 15px">GAME</h1>
             </div>
         </div>
     </div>
@@ -54,7 +47,7 @@
     <div class="row">
         <div class="col">
             <div class="d-flex justify-content-center">
-                <h1 style="margin-left: 56px; color: white">ALIEN X HUMAN</h1>
+                <img src="../IMG/game.png" onclick="welcome()" width="300px" height="300px">
             </div>
         </div>
     </div>
@@ -62,15 +55,33 @@
     <div class="row">
         <div class="col">
             <div class="d-flex justify-content-center">
-                <div class="ml-5 mb-2">
-                        <select class="form-control" onclick="function f() {
-                                    //Reproduz o áudio de boas vindas
+                <h1 style="margin-left: 20px; color: white">ALIEN</h1>
+            </div>
+        </div>
+    </div>
 
-                                    var audio_game_over = new Audio();
-                                    audio_game_over.src = 'welcome.mp3';
-                                    audio_game_over.play();
-                    }" id="nivel">
-                        <option value="">-- Selecione o nível </option>
+    <div class="row">
+        <div class="col">
+            <div class="d-flex justify-content-center">
+                <h1 style="margin-left: 20px; color: white">X</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <div class="d-flex justify-content-center">
+                <h1 style="margin-left: 20px; color: white">HUMAN</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <div class="d-flex justify-content-center">
+                <div class="mb-2 offset-2 ml-5">
+                    <select class="form-control" id="nivel">
+                        <option value="">Selecione o nível: </option>
                         <option value="nm">Normal</option>
                         <option value="md">Médio</option>
                         <option value="df">Difícil</option>
@@ -81,9 +92,9 @@
 
         <div class="col">
             <div class="d-flex justify-content-center">
-                <div class="ml-4 mb-2">
+                <div class="mb-2 ">
                     <select class="form-control" id="tempo_de_jogo">
-                        <option value="">-- Selecione o tempo de jogo </option>
+                        <option value="">Selecione o tempo: </option>
                         <option value="30">30 segundos</option>
                         <option value="01">1 minuto</option>
                         <option value="02">2 minutos</option>
@@ -94,11 +105,11 @@
         </div>
     </div>
 
+
     <div class="row">
         <div class="col">
             <div class="d-flex justify-content-center ml-4">
                 <button class= "btn btn-primary btn-lg" onclick="iniciarJogo()"> Iniciar jogo</button>
-                </a>
             </div>
         </div>
     </div>
