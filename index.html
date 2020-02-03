@@ -5,29 +5,16 @@
 
     <title>Menu - Game Alien x Human</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="estilo.css">
-    <link rel="shortcut icon" href="alien.png" >
+    <link rel="stylesheet" type="text/css" href="../BOOTSTRAP_4/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/estilo.css">
+    <link rel="shortcut icon" href="../IMG/alien.png" >
 
     <script rel="script" type="text/javascript">
+            //Reproduz o áudio de boas vindas
 
-        //Inicia o jogo de acordo com a dificuldade escolhida
-
-        function iniciarJogo() {
-            var nivel = document.getElementById('nivel').value;
-            if(nivel === ''){
-                alert('Selecione um nível para iniciar o jogo');
-                return false;
-            }
-            var tempo_de_jogo = document.getElementById('tempo_de_jogo').value;
-            if(tempo_de_jogo === ''){
-                alert('Selecione um tempo de jogo para iniciar o jogo');
-                return false;
-            }
-
-            var link = window.location.href = 'jogo.html?' + nivel; //Envia o nível escolhido para a página do jogo
-            window.location.href = link + '?' + tempo_de_jogo; ////Envia o tempo de jogo escolhido para a página do jogo
-        }
+            var audio_game_over = new Audio();
+            audio_game_over.src = "../MP3/welcome.mp3";
+            audio_game_over.play();
     </script>
 </head>
 
@@ -46,7 +33,7 @@
     <div class="row">
         <div class="col">
             <div class="d-flex justify-content-center ">
-                <img src="game.png" width="400px" height="400px">
+                <img src="../IMG/game.png" width="400px" height="400px">
             </div>
         </div>
     </div>
@@ -89,6 +76,28 @@
     </div>
 
 
+    <script rel="script" type="text/javascript">
+        //Inicia o jogo de acordo com a dificuldade escolhida
+
+        function iniciarJogo() {
+            var nivel = document.getElementById('nivel').value;
+            if(nivel === ''){
+                alert('Selecione um nível para iniciar o jogo');
+                return false;
+            }
+            var tempo_de_jogo = document.getElementById('tempo_de_jogo').value;
+            if(tempo_de_jogo === ''){
+                alert('Selecione um tempo de jogo para iniciar o jogo');
+                return false;
+            }
+
+            var link = window.location.href = 'jogo.html?' + nivel; //Envia o nível escolhido para a página do jogo
+            window.location.href = link + '?' + tempo_de_jogo; ////Envia o tempo de jogo escolhido para a página do jogo
+        }
+
+    </script>
+
+
     <div class="row">
         <div class="col">
             <div class="d-flex justify-content-center ml-4">
@@ -98,16 +107,7 @@
         </div>
     </div>
 
-
 </div>
 
 </body>
-    <script>
-         //Reproduz o áudio de boas vindas
-
-        var audio_game_over = new Audio();
-        audio_game_over.src = "welcome.mp3";
-        audio_game_over.play();
-    </script>
-
 </html>
