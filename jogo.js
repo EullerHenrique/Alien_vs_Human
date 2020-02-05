@@ -31,7 +31,12 @@
         var i = 10;
 
         function posicaoRandomica() {
-                
+                var i = 0;
+                if(i==0){
+                        vidas--;
+                        document.getElementById('vida').innerHTML = vidas;
+                        i++;
+                }
             //Remover o foguete anterior (caso exista) imediatamente
             if(document.getElementById('foguete')) {
                 document.getElementById('foguete').remove();
