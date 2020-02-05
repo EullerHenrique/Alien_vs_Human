@@ -194,9 +194,9 @@
                         criaFogueteTempo = 800;
                         vidas = 200;
                     }
-            }
+            
             console.log('Velocidade do jogo escolhida', criaFogueteTempo);
-         }
+         
         //
 
         //Recebe o tempo de jogo escolhido
