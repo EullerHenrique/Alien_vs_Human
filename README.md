@@ -1,6 +1,5 @@
-##### O Game Alien X Human foi desenvolvido com base no Game Mata Mosquito do curso [Desenvolvimento Web Completo](https://www.udemy.com/course/web-completo/).
+##### O Game Alien vs Human foi desenvolvido com base no Game Mata Mosquito do curso [Desenvolvimento Web Completo](https://www.udemy.com/course/web-completo/).
 
-###### https://eullerhenrique.github.io/Game_Alien_X_Human/
+###### https://eullerhenrique.github.io/Game_Alien_vs_Human/
 
-![screencapture-eullerhenrique-github-io-Game-Alien-X-Human-index-html-2020-02-03-04_35_13](https://user-images.githubusercontent.com/48317736/73633981-d1343e00-463e-11ea-8609-50f773509a60.png)
-
+![screencapture-eullerhenrique-github-io-Game-Alien-vs-Human-2020-02-04-22_54_43](https://user-images.githubusercontent.com/48317736/73804066-5c2d4980-47a1-11ea-8a6c-766f266c6df6.png)
