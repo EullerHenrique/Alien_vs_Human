@@ -189,7 +189,6 @@
             }else if(nivel === 'df'){
                 //Tempo de 750, ou seja, 0.75 segundos
                 criaFogueteTempo = 750;
-                vidas = 200;
             }
 
             console.log('Velocidade do jogo escolhida', criaFogueteTempo);
@@ -208,15 +207,27 @@
             if(tempo_de_jogo === '30'){
                 //tempo_de_jogo = 30 segundos
                 tempo = 30;
+                if(nivel == 'df'){
+                    vidas = 30;
+                }
             }else if(tempo_de_jogo === '01'){
                 //tempo_de_jogo = 1 minuto
                 tempo = 60;
+                if(nivel == 'df'){
+                    vidas = 60;
+                }
             }else if(tempo_de_jogo === '02'){
                 //tempo de jogo = 2 minutos
                 tempo  = 120;
+                if(nivel == 'df'){
+                    vidas = 120;
+                }
             }else if(tempo_de_jogo === '03'){
                 //tempo de jogo = 3 minutos
                 tempo = 180;
+                if(nivel == 'df'){
+                    vidas = 180;
+                }
             }
         console.log('Tempo de jogo escolhido', tempo);
 
