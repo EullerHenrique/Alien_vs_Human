@@ -173,29 +173,35 @@
         console.log('Resultado do lado randomico do foguete: ' + ladoAleatorio())
 
         //Recebe a dificuldade do jogo escolhida e age de acordo
-
+         function controlaTempo(){
             var nivel = window.location.search;
             var criaFogueteTempo;
+            var i = 0;    
+            
+            if(i===0){
+                criaFogueteTempo = 0;
+            }else{
 
-            nivel = nivel.substr('?',3);
-            nivel = nivel.replace('?','');
+                    nivel = nivel.substr('?',3);
+                    nivel = nivel.replace('?','');
 
-            if(nivel === 'nm'){
-                //Tempo de 1500, ou seja, 1 segundo e meio
-                criaFogueteTempo = 1500;
-                vidas = 5;
+                    if(nivel === 'nm'){
+                        //Tempo de 1500, ou seja, 1 segundo e meio
+                        criaFogueteTempo = 1500;
+                        vidas = 5;
 
-            }else if(nivel === 'md'){
-                //Tempo de 1000, ou seja, 1 segundo
-                criaFogueteTempo = 1000;
-                vidas = 15;
-            }else if(nivel === 'df'){
-                //Tempo de 800, ou seja, 0.80 segundos
-                criaFogueteTempo = 800;
-                vidas = 200;
+                    }else if(nivel === 'md'){
+                        //Tempo de 1000, ou seja, 1 segundo
+                        criaFogueteTempo = 1000;
+                        vidas = 15;
+                    }else if(nivel === 'df'){
+                        //Tempo de 800, ou seja, 0.80 segundos
+                        criaFogueteTempo = 800;
+                        vidas = 200;
+                    }
             }
-
             console.log('Velocidade do jogo escolhida', criaFogueteTempo);
+         }
         //
 
         //Recebe o tempo de jogo escolhido
