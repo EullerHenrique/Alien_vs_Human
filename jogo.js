@@ -186,9 +186,9 @@
                 criaFogueteTempo = 1000;
                 vidas = 15;
             }else if(nivel === 'df'){
-                //Tempo de 750, ou seja, 0.75 segundos
-                criaFogueteTempo = 750;
-                vidas = 2000;
+                //Tempo de 800, ou seja, 0.80 segundos
+                criaFogueteTempo = 800;
+                vidas = 200;
             }
 
             console.log('Velocidade do jogo escolhida', criaFogueteTempo);
