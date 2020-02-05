@@ -213,7 +213,7 @@
                 //tempo_de_jogo = 30 segundos
                 tempo = 30;
                 if(nivel == 'df'){
-                    vidas = 30;
+                    vidas = 15;
                 }
             }else if(tempo_de_jogo === '01'){
                 //tempo_de_jogo = 1 minuto
