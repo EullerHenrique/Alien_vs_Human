@@ -31,14 +31,7 @@
         var i = 10;
 
         function posicaoRandomica() {
-
-            //Remover a explosao anterior (caso exista) após 1.5 segundos
-            if(document.getElementById('explosao')) {
-                var apagaExplosao = setTimeout(function () {
-                    document.getElementById('explosao').remove();
-                }, 1500);
-            }
-
+                
             //Remover o foguete anterior (caso exista) imediatamente
             if(document.getElementById('foguete')) {
                 document.getElementById('foguete').remove();
@@ -55,6 +48,13 @@
                     //Redirecionamento para a página fim de jogo
                     window.location.href = 'fim_de_jogo.html';
                 }
+            }
+
+            //Remover a explosao anterior (caso exista) após 1.5 segundos
+            if(document.getElementById('explosao')) {
+                var apagaExplosao = setTimeout(function () {
+                    document.getElementById('explosao').remove();
+                }, 1500);
             }
 
             var posicaoX = Math.floor(Math.random() * (largura - 90)); // -90 -> correção barra de rolagem
