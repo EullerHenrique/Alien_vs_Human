@@ -39,13 +39,9 @@ pois os elementos html que serão criados serão filhos do body, logo, o body te
     document.getElementById('cronometro').innerHTML = tempo;
     document.getElementById('score').innerHTML = score;
     document.getElementById('vida').innerHTML = vidas;
-    var i = 0;
-    if(i === 0){
-       setInterval(posicaoRandomica, 0);
-        i++;
-    }else{
-       setInterval(posicaoRandomica, criaFogueteTempo) //Set interval recebe um callBack como argumento, ou seja, o endereço de uma função
-    }
+ 
+    setInterval(posicaoRandomica, criaFogueteTempo) //Set interval recebe um callBack como argumento, ou seja, o endereço de uma função
+  
 </script>
 
 </html>
