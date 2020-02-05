@@ -45,8 +45,12 @@
 
                 //Controle dinamico das vidas
                 if(vidas >= 0) {
-                    document.getElementById('vida').innerHTML = vidas;
-                    vidas--;
+                  vidas--;  
+                  if(vidas < 0){
+                         document.getElementById('vida').innerHTML = 0;
+                  }else{       
+                        document.getElementById('vida').innerHTML = vidas;
+                  }
                 }else{
                     //Redirecionamento para a página fim de jogo
                     window.location.href = 'fim_de_jogo.html';
