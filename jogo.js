@@ -180,6 +180,7 @@
             
             if(i===0){
                 criaFogueteTempo = 0;
+                i++;
             }else{
 
                     nivel = nivel.substr('?',3);
