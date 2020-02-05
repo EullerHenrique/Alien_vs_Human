@@ -173,16 +173,10 @@
         console.log('Resultado do lado randomico do foguete: ' + ladoAleatorio())
 
         //Recebe a dificuldade do jogo escolhida e age de acordo
-         function controlaTempo(){
+       
             var nivel = window.location.search;
             var criaFogueteTempo;
-            var i = 0;    
-            
-            if(i===0){
-                criaFogueteTempo = 0;
-                i++;
-            }else{
-
+          
                     nivel = nivel.substr('?',3);
                     nivel = nivel.replace('?','');
 
