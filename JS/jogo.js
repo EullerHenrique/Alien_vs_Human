@@ -1,4 +1,3 @@
-
         //Reproduz a trilha sónora do jogo infinitamente
 
         var audio_space = new Audio();
@@ -32,26 +31,30 @@
         var i = 10;
 
         function posicaoRandomica() {
-
-            //Remover a explosao anterior (caso exista) após 1.5 segundos
-            if(document.getElementById('explosao')) {
-                var apagaExplosao = setTimeout(function () {
-                    document.getElementById('explosao').remove();
-                }, 1500);
-            }
-
+    
             //Remover o foguete anterior (caso exista) imediatamente
             if(document.getElementById('foguete')) {
                 document.getElementById('foguete').remove();
 
                 //Controle dinamico das vidas
                 if(vidas >= 0) {
-                    document.getElementById('vida').innerHTML = vidas;
-                    vidas--;
+                  vidas--;  
+                  if(vidas < 0){
+                         document.getElementById('vida').innerHTML = 0;
+                  }else{       
+                        document.getElementById('vida').innerHTML = vidas;
+                  }
                 }else{
                     //Redirecionamento para a página fim de jogo
                     window.location.href = 'fim_de_jogo.html';
                 }
+            }
+
+            //Remover a explosao anterior (caso exista) após 1.5 segundos
+            if(document.getElementById('explosao')) {
+                var apagaExplosao = setTimeout(function () {
+                    document.getElementById('explosao').remove();
+                }, 1500);
             }
 
             var posicaoX = Math.floor(Math.random() * (largura - 90)); // -90 -> correção barra de rolagem
@@ -170,28 +173,30 @@
         console.log('Resultado do lado randomico do foguete: ' + ladoAleatorio())
 
         //Recebe a dificuldade do jogo escolhida e age de acordo
-
+       
             var nivel = window.location.search;
             var criaFogueteTempo;
+          
+                    nivel = nivel.substr('?',3);
+                    nivel = nivel.replace('?','');
 
-            nivel = nivel.substr('?',3);
-            nivel = nivel.replace('?','');
+                    if(nivel === 'nm'){
+                        //Tempo de 1500, ou seja, 1 segundo e meio
+                        criaFogueteTempo = 1500;
+                        vidas = 5;
 
-            if(nivel === 'nm'){
-                //Tempo de 1500, ou seja, 1 segundo e meio
-                criaFogueteTempo = 1500;
-                vidas = 5;
-
-            }else if(nivel === 'md'){
-                //Tempo de 1000, ou seja, 1 segundo
-                criaFogueteTempo = 1000;
-                vidas = 15;
-            }else if(nivel === 'df'){
-                //Tempo de 750, ou seja, 0.75 segundos
-                criaFogueteTempo = 750;
-            }
-
+                    }else if(nivel === 'md'){
+                        //Tempo de 1000, ou seja, 1 segundo
+                        criaFogueteTempo = 1000;
+                        vidas = 15;
+                    }else if(nivel === 'df'){
+                        //Tempo de 800, ou seja, 0.80 segundos
+                        criaFogueteTempo = 800;
+                      
+                    }
+            
             console.log('Velocidade do jogo escolhida', criaFogueteTempo);
+         
         //
 
         //Recebe o tempo de jogo escolhido
@@ -204,29 +209,29 @@
             tempo_de_jogo =  tempo_de_jogo.replace('?md?','');
             tempo_de_jogo =  tempo_de_jogo.replace('?df?','');
 
-            if(tempo_de_jogo === '30'){
+           if(tempo_de_jogo === '30'){
                 //tempo_de_jogo = 30 segundos
                 tempo = 30;
                 if(nivel == 'df'){
-                    vidas = 30;
+                    vidas = 15;
                 }
             }else if(tempo_de_jogo === '01'){
                 //tempo_de_jogo = 1 minuto
                 tempo = 60;
                 if(nivel == 'df'){
-                    vidas = 60;
+                    vidas = 30;
                 }
             }else if(tempo_de_jogo === '02'){
                 //tempo de jogo = 2 minutos
                 tempo  = 120;
                 if(nivel == 'df'){
-                    vidas = 120;
+                    vidas = 60;
                 }
             }else if(tempo_de_jogo === '03'){
                 //tempo de jogo = 3 minutos
                 tempo = 180;
                 if(nivel == 'df'){
-                    vidas = 180;
+                    vidas = 90;
                 }
             }
         console.log('Tempo de jogo escolhido', tempo);
