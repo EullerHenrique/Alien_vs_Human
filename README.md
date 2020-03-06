@@ -11,9 +11,12 @@
 
 ### Página do jogo
 
+![screencapture-eullerhenrique-github-io-Game-Alien-vs-Human-jogo-html-2020-03-06-15_03_43](https://user-images.githubusercontent.com/48317736/76109752-e0026d80-5fbb-11ea-8f82-414f4321680c.png)
 
 ### Página de Vitória
-
+![screencapture-eullerhenrique-github-io-Game-Alien-vs-Human-vitoria-html-2020-03-06-15_06_26](https://user-images.githubusercontent.com/48317736/76109842-13dd9300-5fbc-11ea-9bbc-4e010ec2a475.png)
 
 ### Página de Derrota
+
+![screencapture-eullerhenrique-github-io-Game-Alien-vs-Human-fim-de-jogo-html-2020-03-06-15_05_46](https://user-images.githubusercontent.com/48317736/76109795-fa3c4b80-5fbb-11ea-8973-3ee36bd21fc6.png)
 
