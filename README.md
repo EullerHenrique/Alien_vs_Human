@@ -1,8 +1,8 @@
 ## Site Online:
 ###### https://eullerhenrique.github.io/Game_Alien_vs_Human/
 
-## Game Alien vs Human
-##### O Game Alien vs Human foi desenvolvido com base no Game Mata Mosquito do curso [Desenvolvimento Web Completo](https://www.udemy.com/course/web-completo/).
+## Projeto Alien vs Human
+##### O projeto Alien vs Human foi desenvolvido com base no Game Mata Mosquito do curso [Desenvolvimento Web Completo](https://www.udemy.com/course/web-completo/).
 ##### O foco desse projeto foi aplicar conhecimentos adquiridos ao longo do curso relacionados a HTML, CSS, BOOTSTRAP e JAVASCRIPT.
 
 ### Página principal
