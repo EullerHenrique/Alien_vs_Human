@@ -3,6 +3,7 @@
 
 ## Projeto Alien vs Human
 ##### O projeto Alien vs Human foi desenvolvido com base no Game Mata Mosquito do curso [Desenvolvimento Web Completo](https://www.udemy.com/course/web-completo/).
+- Obs: Em comparação ao projeto base, diversas alterações foram realizadas.
 ##### O foco desse projeto foi aplicar conhecimentos adquiridos ao longo do curso relacionados a HTML, CSS, BOOTSTRAP e JAVASCRIPT.
 
 ### Página principal
